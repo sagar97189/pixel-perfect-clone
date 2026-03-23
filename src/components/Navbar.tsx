@@ -1,67 +1,82 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = ["Home", "About Us", "Our Services", "Contact"];
+const navLinks = [
+  { name: "Products", href: "#" },
+  { name: "Pricing", href: "#" },
+  { name: "Api for Developer", href: "#" },
+  { name: "Blog", href: "#" },
+  { name: "Contact", href: "#" },
+];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="w-full px-5 md:px-8 lg:px-14 py-4 flex items-center justify-between relative z-50 bg-gray-400 rounded-3xl">
-      <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-          <span className="text-primary-foreground text-xs font-bold">✦</span>
+    <div className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 lg:px-20 pointer-events-none">
+      <nav className="max-w-7xl mx-auto bg-white/80 backdrop-blur-xl border border-white/40 rounded-[32px] px-6 py-2 flex items-center justify-between shadow-lg pointer-events-auto">
+        {/* Logo Section */}
+        <div className="flex items-center gap-2">
+          <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-gray-100">
+             <div className="w-5 h-5 bg-gradient-to-br from-[#8b5cf6] to-[#d8b4fe] rounded-sm transform rotate-45 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-white rounded-full translate-x-[0.5px] translate-y-[0.5px]" />
+             </div>
+          </div>
+          <span className="text-xl font-bold text-[#111111] tracking-tight">Agency</span>
         </div>
-        <span className="text-lg font-bold text-foreground">Agency</span>
-      </div>
 
-      {/* Desktop Nav */}
-      <div className="hidden md:flex items-center gap-8 bg-gray-800 text-2xl">
-        {navLinks.map((link) => (
-          <a
-            key={link}
-            href="#"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors text-4xl"
-          >
-            {link}
-          </a>
-        ))}
-      </div>
+        {/* Desktop Nav Links */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-semibold text-[#444444] hover:text-[#111111] transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
 
-      {/* <div className="hidden md:flex items-center gap-3">
-        <button className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
-          Log in
+        {/* Action Buttons */}
+        <div className="hidden lg:flex items-center gap-5">
+          <button className="text-sm font-bold text-[#111111] hover:text-[#444444] transition-colors">
+            Log In
+          </button>
+          <button className="bg-[#1a1a2e] text-white px-6 py-3 rounded-full text-sm font-extrabold hover:bg-[#2a2a4e] transition-colors shadow-md">
+            Apply Now
+          </button>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          className="lg:hidden text-[#111111] p-2"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <button className="btn-primary-dark">Apply Now</button>
-      </div> */}
-
-      {/* Mobile Toggle */}
-      <button
-        className="md:hidden text-foreground"
-        onClick={() => setMobileOpen(!mobileOpen)}
-      >
-        {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+      </nav>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="absolute top-full left-0 w-full bg-card border-b border-border p-6 flex flex-col gap-4 md:hidden shadow-lg">
+        <div className="absolute top-full left-6 right-6 mt-4 bg-white/95 backdrop-blur-2xl rounded-[32px] p-10 flex flex-col gap-6 lg:hidden shadow-2xl border border-white/40 pointer-events-auto">
           {navLinks.map((link) => (
             <a
-              key={link}
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              key={link.name}
+              href={link.href}
+              className="text-xl font-semibold text-[#111111]"
+              onClick={() => setMobileOpen(false)}
             >
-              {link}
+              {link.name}
             </a>
           ))}
-          <div className="flex flex-col gap-2 pt-4 border-t border-border">
-            <button className="text-sm font-medium text-foreground">Log in</button>
-            <button className="btn-primary-dark">Apply Now</button>
+          <div className="flex flex-col gap-4 pt-8 border-t border-gray-100">
+            <button className="text-lg font-bold text-[#111111] text-left">Log In</button>
+            <button className="bg-[#1a1a2e] text-white py-5 rounded-full text-lg font-bold">Apply Now</button>
           </div>
         </div>
       )}
-    </nav>
+    </div>
   );
 };
 
