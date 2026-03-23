@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative px-6 md:px-10 lg:px-16 pt-8 pb-20 overflow-hidden">
       {/* Subtle gradient bg */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-purple-50/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/40 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-12">
         {/* Left Content */}
