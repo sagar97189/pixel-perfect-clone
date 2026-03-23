@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = ["Products", "Pricing", "Api for Developer", "Blog", "Contact"];
+const navLinks = ["Home", "About Us", "Our Services", "Contact"];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="w-full px-6 md:px-10 lg:px-16 py-5 flex items-center justify-between relative z-50">
+    <nav className="w-full px-5 md:px-8 lg:px-14 py-4 flex items-center justify-between relative z-50 bg-gray-400 rounded-3xl">
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
           <span className="text-primary-foreground text-xs font-bold">✦</span>
@@ -16,24 +16,24 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Nav */}
-      <div className="hidden md:flex items-center gap-8">
+      <div className="hidden md:flex items-center gap-8 bg-gray-800 text-2xl">
         {navLinks.map((link) => (
           <a
             key={link}
             href="#"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors text-4xl"
           >
             {link}
           </a>
         ))}
       </div>
 
-      <div className="hidden md:flex items-center gap-3">
+      {/* <div className="hidden md:flex items-center gap-3">
         <button className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
           Log in
         </button>
         <button className="btn-primary-dark">Apply Now</button>
-      </div>
+      </div> */}
 
       {/* Mobile Toggle */}
       <button
