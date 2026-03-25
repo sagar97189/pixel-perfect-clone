@@ -2,11 +2,18 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+<<<<<<< Updated upstream
   { name: "Services", href: "#" },
   { name: "Portfolio", href: "#" },
   { name: "About", href: "#" },
   { name: "Blog", href: "#" },
   { name: "Contact", href: "#" },
+=======
+  { name: "Home", href: "#" },
+  { name: "About Us", href: "#" },
+  { name: "Our Services", href: "#" },
+ { name: "Contact", href: "#" },
+>>>>>>> Stashed changes
 ];
 
 const Navbar = () => {
@@ -14,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 lg:px-20 pointer-events-none">
-      <nav className="max-w-7xl mx-auto bg-white/80 backdrop-blur-xl border border-white/40 rounded-[32px] px-6 py-2 flex items-center justify-between shadow-lg pointer-events-auto">
+      <nav className="max-w-7xl mx-auto bg-white/40backdrop-blur-xl border border-white/40 rounded-[32px] px-6 py-2 flex items-center justify-between shadow-lg pointer-events-auto">
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-gray-100">
@@ -26,7 +33,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8 ">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -38,15 +45,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Action Buttons */}
-        <div className="hidden lg:flex items-center gap-5">
-          <button className="text-sm font-bold text-[#111111] hover:text-[#444444] transition-colors">
-            Log In
-          </button>
-          <button className="bg-[#1a1a2e] text-white px-6 py-3 rounded-full text-sm font-extrabold hover:bg-[#2a2a4e] transition-colors shadow-md">
-            Apply Now
-          </button>
-        </div>
+        
+       
 
         {/* Mobile Toggle */}
         <button
@@ -70,10 +70,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <div className="flex flex-col gap-4 pt-8 border-t border-gray-100">
-            <button className="text-lg font-bold text-[#111111] text-left">Log In</button>
-            <button className="bg-[#1a1a2e] text-white py-5 rounded-full text-lg font-bold">Apply Now</button>
-          </div>
+          
         </div>
       )}
     </div>
