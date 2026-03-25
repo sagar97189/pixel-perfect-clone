@@ -2,18 +2,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-<<<<<<< Updated upstream
   { name: "Services", href: "#" },
   { name: "Portfolio", href: "#" },
   { name: "About", href: "#" },
   { name: "Blog", href: "#" },
   { name: "Contact", href: "#" },
-=======
-  { name: "Home", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Our Services", href: "#" },
- { name: "Contact", href: "#" },
->>>>>>> Stashed changes
 ];
 
 const Navbar = () => {
@@ -21,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 lg:px-20 pointer-events-none">
-      <nav className="max-w-7xl mx-auto bg-white/40backdrop-blur-xl border border-white/40 rounded-[32px] px-6 py-2 flex items-center justify-between shadow-lg pointer-events-auto">
+      <nav className="max-w-7xl mx-auto bg-white/40 backdrop-blur-xl border border-white/40 rounded-[32px] px-6 py-2 flex items-center justify-between shadow-lg pointer-events-auto">
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-gray-100">
