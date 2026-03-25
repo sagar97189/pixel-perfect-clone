@@ -80,20 +80,10 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-}
 
-/* Lenis Recommended Styles */
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {

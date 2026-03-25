@@ -18,9 +18,9 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-gray-100">
-             <div className="w-5 h-5 bg-gradient-to-br from-[#8b5cf6] to-[#d8b4fe] rounded-sm transform rotate-45 flex items-center justify-center">
-                <div className="w-1.5 h-1.5 bg-white rounded-full translate-x-[0.5px] translate-y-[0.5px]" />
-             </div>
+            <div className="w-5 h-5 bg-gradient-to-br from-[#8b5cf6] to-[#d8b4fe] rounded-sm transform rotate-45 flex items-center justify-center">
+              <div className="w-1.5 h-1.5 bg-white rounded-full translate-x-[0.5px] translate-y-[0.5px]" />
+            </div>
           </div>
           <span className="text-xl font-bold text-[#111111] tracking-tight">Agency</span>
         </div>
@@ -38,8 +38,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        
-       
+
+
 
         {/* Mobile Toggle */}
         <button
@@ -63,7 +63,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          
+
         </div>
       )}
     </div>
