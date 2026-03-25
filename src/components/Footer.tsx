@@ -1,7 +1,8 @@
 const footerLinks = {
   Home: ["About Us", "Our Works", "Community"],
+  Services: ["Web Development", "UI/UX Design", "SEO", "Digital Marketing"],
   Features: ["Get Started", "Privacy Policy"],
-  "Social Media": ["Instagram", "Linkedin"],
+  "Social Media": ["Instagram", "LinkedIn"],
 };
 
 const Footer = () => {

@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Products", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Api for Developer", href: "#" },
+  { name: "Services", href: "#" },
+  { name: "Portfolio", href: "#" },
+  { name: "About", href: "#" },
   { name: "Blog", href: "#" },
   { name: "Contact", href: "#" },
 ];
